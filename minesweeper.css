@@ -1,0 +1,40 @@
+* {
+	font-family: helvetica;
+}
+
+body {
+	text-align: center;
+}
+
+#board {
+	margin: 20px auto 0 auto;
+}
+
+
+/* Game board styles */
+
+.row {
+	height: 25px;
+}
+
+.tile {
+	width: 20px;
+	height: 20px;
+	display: inline;
+	margin: 0 .5px 0 .5px;
+	float: left;
+}
+
+.hidden {
+	background-color: #475F77;
+	border: 2px solid #354B5E;
+}
+
+.showing {
+	background-color: #DCDDD8;
+	border: 2px solid #DCDDD8;
+}
+
+.bomb {
+	background-color: #D74B4B;
+}

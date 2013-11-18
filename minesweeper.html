@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Matt Stephens -- Submission to Thumbtack Minesweeper Challenge -->
+<html>
+<head>
+    <title>Minesweeper</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="minesweeper.css">
+</head>
+<body>
+    <h1>Minesweeper</h1>
+    <select id="board-size">
+        <option value="8">8x8</option>
+        <option value="12">12x12</option>
+        <option value="16">16x16</option>
+    </select>
+    <button id="validate">&#9786;</button>
+    <button id="cheat">CHEAT</button>
+    <button id="new-game-button">New Game</button>
+    <section id="game-board">
+        <div id="board">
+            <!-- Board will be rendered here based on board-size input -->
+        </div>
+    </section>
+    <script src="minesweeper.js"></script>
+    <script src="jquery2.0.3.js"></script>
+    <script>
+        var game = new Minesweeper(
+            $("#board"),
+            $("#board-size").val()
+        );
+        $("#new-game-button").click(function() {
+            game = new Minesweeper(
+                $("#board"),
+                $("#board-size").val()
+            );
+        });
+    </script>
+</body>
+</html>
